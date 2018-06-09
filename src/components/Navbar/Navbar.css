@@ -1,7 +1,11 @@
-#navBar {
+.Navbar-container {
     margin-bottom: 5rem;
-    background: #1f86ee;
+    /* background: #1f86ee; */
     position: absolute;
     padding-bottom: 50px;
     display: flex;
+  }
+
+  nav {
+    background: #acd1f5;
   }

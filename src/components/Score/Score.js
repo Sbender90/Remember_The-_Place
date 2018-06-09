@@ -15,4 +15,4 @@ const Score = props => (
   </div>
 );
 
-export default Score;
+export default Score
