@@ -1,11 +1,25 @@
 .Navbar-container {
     margin-bottom: 5rem;
-    /* background: #1f86ee; */
     position: absolute;
     padding-bottom: 50px;
     display: flex;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 3rem;
   }
 
   nav {
-    background: #acd1f5;
+    background: #DCC0CB;
+    font-family: 'Maven Pro', sans-serif;
+  }
+
+  .brand-logo {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    color: #B26A4C;
+  }
+
+  li {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 1.5rem;
   }
