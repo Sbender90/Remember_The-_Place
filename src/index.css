@@ -2,7 +2,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url("assets/images/rust_abstract.jpg");
+  background-image: url("assets/images/grey_barnwood.jpg");
+
+  background-color: #238B61;
 }
 
 * {
