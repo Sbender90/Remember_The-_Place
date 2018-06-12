@@ -34,10 +34,12 @@ class App extends Component {
         
       } 
     }
+    this.reArrangePictures();
   }
 
-  // reArrangePictures = (pictures) => {
-  //   // let currentIndex = pictures.length;
+  reArrangePictures = () => {
+    let currentIndex = this.state.pictures.length;
+    console.log("reArrangePictures");
 
   //   for (var i = 0; i < pictures.length - 1; i++){
   //     var j = i + Math.floor(Math.random() * (pictures.length - 1));
@@ -50,28 +52,29 @@ class App extends Component {
 
 
 
-    // old try giving me the same errors as above
-    // while (0 !== currentIndex) {
+  //   old try giving me the same errors as above
+    while (currentIndex) {
       
-    //   let randomIndex = Math.floor(Math.random() * currentIndex);
-    //   currentIndex -= 1;
-      
-    //   let temporaryValue = pictures[currentIndex];
-    //   pictures[currentIndex] = pictures[randomIndex];
-    //   pictures[randomIndex] = temporaryValue;
-    // }
+      let randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+      let temporaryValue = pictures[currentIndex];
+      pictures[currentIndex] = pictures[randomIndex];
+      pictures[randomIndex] = temporaryValue;
+    }
 
-    // this.setState({pictures:pictures});
-  // }
+    this.setState({pictures:pictures});
+  }
 
   renderPicutres = () => {
     return this.state.pictures.map(picture => (
       <section className='pictures_card' key={picture.id} id={picture.id}>
         <PicturesCard 
-          name={picture.name}
+          id={picture.id}
+        
           image={picture.image}
-          reArrangePictures={() => {this.reArrangePictures(this.state.cards)}}
-          clickedPicture={() => {this.clickedPicture(picture.id)}}/>
+          imageClicked={this.clickedPicture}
+          // clickedPicture={() => {this.clickedPicture(picture.id)}}/>
+          />
           
       </section>
     ))
